@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bootcamp.GameTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-15T09:54:22" hostname="Ravis-MacBook-Pro.local" time="0.083">
+  <properties/>
+  <testcase name="shouldReturnAValidCheatMovesFor2Rounds" classname="com.bootcamp.GameTest" time="0.083"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
