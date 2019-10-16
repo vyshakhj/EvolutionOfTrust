@@ -1,7 +1,5 @@
 package com.bootcamp;
 
-import java.util.List;
-
 public class Player {
     private PlayerBehaviour behaviour;
 
@@ -14,6 +12,6 @@ public class Player {
     }
 
     public void updatePreviousMove(Behaviour behavior) {
-        this.behaviour.updateOtherPlayerBehavior(behavior);
+        this.behaviour.saveOpponentsBehaviour(behavior);
     }
 }

@@ -22,11 +22,11 @@ public class DetectiveBehaviour extends PlayerBehaviour {
     }
 
     @Override
-    public void updateOtherPlayerBehavior(Behaviour behaviour) {
+    public void saveOpponentsBehaviour(Behaviour behaviour) {
         if (behaviours.size() > 0 && Behaviour.Cheat.equals(behaviour)) {
             playerBehaviour = new CheatBehaviour();
         } else {
-            playerBehaviour.updateOtherPlayerBehavior(behaviour);
+            playerBehaviour.saveOpponentsBehaviour(behaviour);
         }
 
         behaviours.poll();
