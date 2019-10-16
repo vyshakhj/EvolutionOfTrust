@@ -1,5 +1,7 @@
 package com.bootcamp;
 
-public interface PlayerBehaviour {
+public abstract class PlayerBehaviour {
     public abstract Behaviour play();
+    public void updateOtherPlayerBehavior(Behaviour behaviour) {
+    };
 }

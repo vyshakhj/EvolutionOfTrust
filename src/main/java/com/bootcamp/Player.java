@@ -10,4 +10,8 @@ public class Player {
     public Behaviour play() {
        return this.behaviour.play();
     }
+
+    public void updatePreviousMove(Behaviour behavior) {
+        this.behaviour.updateOtherPlayerBehavior(behavior);
+    }
 }

@@ -62,4 +62,25 @@ public class GameTest {
         assertEquals(-1, score.getPlayer1Score());
         assertEquals(3, score.getPlayer2Score());
     }
+    @Test
+    public void shouldReturnAValidResultForCopyCatPlayerAndCheatPlayer() {
+        Player cheatPlayer = new Player(new CheatBehaviour());
+        Player copycatPlayer = new Player(new CopycatBehavior());
+
+        Game game = new Game(cheatPlayer, copycatPlayer, 2);
+        Score score = game.start();
+        assertEquals(3, score.getPlayer1Score());
+        assertEquals(-1, score.getPlayer2Score());
+    }
+
+    @Test
+    public void shouldReturnAValidResultForCheatPlayerAndCopycatPlayer() {
+        Player copycatPlayer = new Player(new CopycatBehavior());
+        Player cheatPlayer = new Player(new CheatBehaviour());
+
+        Game game = new Game(copycatPlayer, cheatPlayer, 2);
+        Score score = game.start();
+        assertEquals(-1, score.getPlayer1Score());
+        assertEquals(3, score.getPlayer2Score());
+    }
 }

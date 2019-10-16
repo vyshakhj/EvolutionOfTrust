@@ -14,11 +14,14 @@ public class Game {
     }
 
     public Score start() {
-        for (int i = 0; i < this.numberOfRounds; i++) {
+        for (int round = 1; round <= this.numberOfRounds; round++) {
             Behaviour playerOneInput = player1.play();
             Behaviour playerTwoInput = player2.play();
             Score roundScore = rule(playerOneInput, playerTwoInput);
             this.score.updateScores(roundScore.getPlayer1Score(), roundScore.getPlayer2Score());
+
+            player1.updatePreviousMove(playerTwoInput);
+            player2.updatePreviousMove(playerOneInput);
         }
 
         return this.score;

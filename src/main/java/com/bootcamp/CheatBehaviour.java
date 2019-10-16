@@ -1,6 +1,6 @@
 package com.bootcamp;
 
-public class CheatBehaviour implements PlayerBehaviour {
+public class CheatBehaviour extends PlayerBehaviour {
     @Override
     public Behaviour play() {
         return Behaviour.Cheat;
