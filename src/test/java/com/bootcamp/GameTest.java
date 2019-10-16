@@ -83,4 +83,26 @@ public class GameTest {
         assertEquals(-1, score.getPlayer1Score());
         assertEquals(3, score.getPlayer2Score());
     }
+
+    @Test
+    public void shouldReturnAValidResultForCheatPlayerAndDetectivePlayerForFiveRounds() {
+        Player cheatPlayer = new Player(new CheatBehaviour());
+        Player detectivePlayer = new Player(new DetectiveBehaviour());
+
+        Game game = new Game(cheatPlayer, detectivePlayer, 5);
+        Score score = game.start();
+        assertEquals(9, score.getPlayer1Score());
+        assertEquals(-3, score.getPlayer2Score());
+    }
+
+    @Test
+    public void shouldReturnAValidResultForCooperatePlayerAndDetectivePlayerForFiveRounds() {
+        Player cooperatePlayer = new Player(new CooperateBehaviour());
+        Player detectivePlayer = new Player(new DetectiveBehaviour());
+
+        Game game = new Game(cooperatePlayer, detectivePlayer, 5);
+        Score score = game.start();
+        assertEquals(7, score.getPlayer1Score());
+        assertEquals(11, score.getPlayer2Score());
+    }
 }
