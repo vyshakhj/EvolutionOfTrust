@@ -1,6 +1,6 @@
 package com.bootcamp;
 
-public enum Behaviour {
+public enum Move {
     Cooperate,
     Cheat
 }

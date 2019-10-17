@@ -7,11 +7,11 @@ public class Player {
         this.behaviour = behaviour;
     }
 
-    public Behaviour play() {
+    public Move play() {
        return this.behaviour.play();
     }
 
-    public void updatePreviousMove(Behaviour behavior) {
-        this.behaviour.saveOpponentsBehaviour(behavior);
+    public void updatePreviousMove(Move behavior) {
+        this.behaviour.saveOpponentsMove(behavior);
     }
 }

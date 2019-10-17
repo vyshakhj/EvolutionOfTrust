@@ -8,10 +8,10 @@ public class ConsoleBehaviour extends PlayerBehaviour {
     }
 
     @Override
-    public Behaviour play() {
+    public Move play() {
         if (this.wrapper.readInput().equals("CH"))
-            return Behaviour.Cheat;
+            return Move.Cheat;
         else
-            return Behaviour.Cooperate;
+            return Move.Cooperate;
     }
 }

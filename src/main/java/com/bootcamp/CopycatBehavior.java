@@ -2,19 +2,19 @@ package com.bootcamp;
 
 public class CopycatBehavior extends PlayerBehaviour {
     private boolean isFirstPlay = true;
-    private Behaviour opponentsBehaviour;
+    private Move opponentsMove;
 
-    public void saveOpponentsBehaviour(Behaviour behaviour){
-        this.opponentsBehaviour = behaviour;
+    public void saveOpponentsMove(Move move){
+        this.opponentsMove = move;
     }
 
     @Override
-    public Behaviour play() {
+    public Move play() {
         if (isFirstPlay) {
             isFirstPlay = false;
-            return Behaviour.Cooperate;
+            return Move.Cooperate;
         } else {
-            return this.opponentsBehaviour;
+            return this.opponentsMove;
         }
     }
 }

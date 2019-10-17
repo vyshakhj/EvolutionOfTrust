@@ -12,8 +12,8 @@ public class GameTest {
         Player mockedPlayer1 = mock(Player.class);
         Player mockedPlayer2 = mock(Player.class);
 
-        when(mockedPlayer1.play()).thenReturn(Behaviour.Cooperate);
-        when(mockedPlayer2.play()).thenReturn(Behaviour.Cooperate);
+        when(mockedPlayer1.play()).thenReturn(Move.Cooperate);
+        when(mockedPlayer2.play()).thenReturn(Move.Cooperate);
         Game game = new Game(mockedPlayer1, mockedPlayer2, 2);
         Score score = game.start();
         assertEquals(4, score.getPlayer1Score());
